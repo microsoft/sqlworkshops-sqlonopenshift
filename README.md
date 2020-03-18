@@ -102,6 +102,8 @@ You might be taking this workshop from an instructor who will provide access to 
 
 A complete Prerequisites [document](sqlonopenshift/00_Prereqs.md) exists as part of this workshop. You will be guided to go through Prerequisites in the Next Steps at the bottom of this page.
 
+Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the Creative Commons Attribution 4.0 International Public License, see the LICENSE file, and grant you a license to any code in the repository under the MIT License, see the LICENSE-CODE file. All license files are found in the LICENSES directory.
+
 <p style="border-bottom: 1px solid lightgrey;"></p>
 
 <img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/education1.png"> <h2>Workshop Details</h2>
