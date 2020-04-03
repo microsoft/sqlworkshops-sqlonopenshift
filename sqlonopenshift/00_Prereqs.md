@@ -48,13 +48,11 @@ With the above environment configured, you can now proceed to the first Activity
 
 <br>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Download the latest version of the workshop from https://aka.ms/sqlworkshops</p>
-
 Navigate to your home directory `~` and enter the following command:
 
-`git clone https://github.com/Microsoft/sqlworkshops.git`
+`git clone https://github.com/microsoft/sqlworkshops-sqlonopenshift.git`
 
->**Note**: *If you have used `git clone` to pull down the repo of the workshops in the past, run `git pull` in the sqlworkshops directory to get the latest version.*
+>**Note**: *If you have used `git clone` to pull down the repo of the workshops in the past, run `git pull`  to get the latest version.*
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Login to your OpenShift cluster, via a web browser, using the URL provided to you for the <b>openshiftConsoleUrl</b>.</p>
 
