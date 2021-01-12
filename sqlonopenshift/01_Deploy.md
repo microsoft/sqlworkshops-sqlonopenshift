@@ -76,15 +76,22 @@ When this completes, you should see the following messages and be placed back at
    oc new-app centos/ruby-25-centos7~https://github.com/sclorg/ruby-ex.git
    to build a new example application in Ruby.</pre>
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Create credentials</p>
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Use custom security context constraint (SCC)</p>
 
-TODO: This is where we need to put in how to create a custom scc to support fsGroup and apply that scc to all service accounts for the project. You can mention here though that you could also create a new user with anyuid rights and then add that use to the custom scc. We should put this in a script and add this as step 2.
+The SQL Server container images run as non-root. In order for these images to have proper access to persistent storage, the fsGroup value is needed during pod deployment. The use of fsGroup requires the creation of a custom OpenShift security context constraint (SCC). Then the service account for the project created is added to that SCC. You can read more about OpenShift and SCC at https://www.openshift.com/blog/managing-sccs-in-openshift.
+
+Use the following command or execute the **step2_securitycontext.sh** script:
+
+`oc create -f restrictedfsgroupscc.yaml`
+`oc adm policy add-scc-to-group restrictedfsgroup system:serviceaccounts:mssql`
+
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Create credentials</p>
 
 Next you'll create a `secret` to store the System Administrator (**sa**) password. For this workshop, you will be connecting as the **sa** login. 
 
 >**NOTE**: *In production SQL Server environments, you would not use the **sa** login.* 
 
-Use the following command or execute the **step2_create_secret.sh** script:
+Use the following command or execute the **step3_create_secret.sh** script:
 
 `oc create secret generic mssql --from-literal=SA_PASSWORD="Sql2019isfast"`
 
@@ -100,7 +107,7 @@ When this completes you should see the following message and be placed back at t
 
 A PersistentVolumeClaim allows you to persist SQL Server database files even if the container for SQL Server is stopped or moved by OpenShift.
 
-Use the following command or execute the **step3_storage.sh** script:
+Use the following command or execute the **step4_storage.sh** script:
 
 `oc apply -f storage.yaml`
 
@@ -113,9 +120,7 @@ When this completes you should see the following message and be placed back at t
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Deploy SQL Server</p>
 
-TODO: Change this to SQL 2019 GA container
-
-Use the following command or execute the **step4_deploy_sql.sh** script to deploy SQL Server:
+Use the following command or execute the **step5_deploy_sql.sh** script to deploy SQL Server:
 
 `oc apply -f sqldeployment.yaml`
 
@@ -156,7 +161,7 @@ You can also run the following command to track events in the cluster
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Check the SQL Server logs</p>
 
-The SQL Server database engine produces a file called the ERRORLOG when it starts. The ERRORLOG file can be used to gather interesting information about SQL Server or be used for troubleshooting. Since the output of the **ERRORLOG** is sent to stdout as part of running SQL Server as a container you can view these logs using OpenShift commands. Run the following commands to view the **ERRORLOG** or execute the script **step5_get_errorlog.sh**:
+The SQL Server database engine produces a file called the ERRORLOG when it starts. The ERRORLOG file can be used to gather interesting information about SQL Server or be used for troubleshooting. Since the output of the **ERRORLOG** is sent to stdout as part of running SQL Server as a container you can view these logs using OpenShift commands. Run the following commands to view the **ERRORLOG** or execute the script **step6_get_errorlog.sh**:
 
 `POD=$(oc get pods | grep mssql | awk {'print $1'})`<br>
 `oc logs $POD`<br>
