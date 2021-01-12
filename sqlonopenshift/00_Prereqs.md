@@ -1,6 +1,6 @@
 ![](../graphics/microsoftlogo.png)
 
-# Workshop: SQL Server 2019 on OpenShift (CTP 2.5)
+# Workshop: SQL Server 2019 on OpenShift
 
 #### <i>A Microsoft workshop from the SQL Server team</i>
 
@@ -26,12 +26,12 @@ The workshop does not assume a deep working knowledge of SQL Server or OpenShift
 
 In order to go through the activities of this workshop you will need the following:
 
-- Access to an OpenShift 3.11 cluster. The workshop is currently designed for OpenShift 3.11 and has not been tested for OpenShift 4.0.
-- Modules 1 through 4 require user privileges for the OpenShift cluster for **anyuid** at minimum. Module 5 currently requires cluster admin rights.
+- Access to an OpenShift 4 cluster
+- Modules 1 through 4 require user privileges for the OpenShift cluster for **anyuid** at minimum.
 - A client computer that has access to connect to the OpenShift cluster with the following software installed and configured:
   - A Linux bash shell
   - The OpenShift CLI (oc.exe)
-  - Azure Data Studio (Minimum version is 1.5.2). Install from https://docs.microsoft.com/en-us/sql/azure-data-studio/download
+  - Azure Data Studio. Install from https://docs.microsoft.com/en-us/sql/azure-data-studio/download
   - SQL Command Line Tools (sqlcmd). Check the **For Further Study** section for links to install these tools.
   - **git** client (only needed if you do not have the latest version of the workshop provided to you by the instructor)
   - In addition, the client computer must be able to connect to the Internet to download a sample file or your instructor must provide it for you (WideWorldImporters-Full.bak)

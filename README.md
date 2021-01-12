@@ -1,7 +1,7 @@
 
 ![](graphics/microsoftlogo.png)
 
-# Workshop: SQL Server 2019 on OpenShift (CTP 2.5)
+# Workshop: SQL Server 2019 on OpenShift
 
 #### <i>A Microsoft Course from the SQL Server team</i>
 
@@ -11,24 +11,22 @@
 
 Welcome to this Microsoft solutions workshop on *SQL Server 2019 on OpenShift*.
 
-Red Hat OpenShift Container Platform brings together Docker and Kubernetes, and provides an API to manage these services. OpenShift Container Platform allows you to create and manage containers. From a perspective of SQL Server, OpenShift provides:
+Red Hat OpenShift Container Platform is based on Kubernetes and provides an API to manage these services. The OpenShift Container Platform allows you to create and manage containers. From a perspective of SQL Server, OpenShift provides:
 
 - A scalable architecture to deploy containerized applications and data platforms such as SQL Server
 - Persistent storage for stateful containers like SQL Server
 - Built-in load balancers to abstract application connections to SQL Server
 - Built-in high availability for stateful containers like SQL Server
-- An ecosystem for Operators to simplify application deployment and manage high availability
 
-In this course you will learn the basics of deployment, connection, query execution, performance, high availability, operators, and Always On Availability Groups in SQL Server 2019 with OpenShift.
+In this course you will learn the basics of deployment, connection, query execution, performance, and high availability in SQL Server 2019 with OpenShift.
 
-You will interact with an OpenShift cluster using the OpenShift CLI program `oc` and use the concepts of projects, deployments, pods, labels, PersistentVolumeClaims, and LoadBalancer services as you deploy and use SQL Server on OpenShift. 
+You will interact with an OpenShift cluster using the OpenShift CLI program `oc` and use the concepts of projects, deployments, pods, labels, PersistentVolumeClaims, and LoadBalancer services as you deploy and use SQL Server on OpenShift.
 
 This README.MD file explains how the workshop is structured, what you will learn, and the technologies you will use in this solution.
 
-The workshop is currently built to support SQL Server on OpenShift 3.11 and uses SQL Server 2019 Preview components. A future version of the course will support OpenShift 4.0 with updates for SQL Server 2019 when it becomes generally available.
+The workshop is currently built to support SQL Server on OpenShift 4 and uses the latest SQL Server 2019 Red Hat containers.
 
-**NOTE**: *You're able to complete this workshop without having a prior knowledge of OpenShift, but if you would like to learn more about 
-its features, architecture and management, these materials are available*:
+**NOTE**: *You're able to complete this workshop without having a prior knowledge of OpenShift, but if you would like to learn more about its features, architecture and management, these materials are available*:
 
 - [Getting Started with OpenShift](https://docs.openshift.com/container-platform/3.11/getting_started/index.html)
 - [The OpenShift Architecture](https://docs.openshift.com/container-platform/3.11/architecture/index.html)
@@ -45,7 +43,6 @@ When you complete this course, you will be able to:
 - Connect and run queries against SQL Server deployed on OpenShift.
 - Understand performance capabilities of SQL Server deployed on OpenShift
 - Implement High Availability capabilities of SQL Server deployed on OpenShift
-- Use an operator to deploy and manage an Always On Availability Group on OpenShift.
 
 <p style="border-bottom: 1px solid lightgrey;"></p>
 <img style="float: left; margin: 0px 15px 15px 0px;" src="./graphics/building1.png"> <h2>Business Applications of this Workshop</h2>
@@ -90,7 +87,7 @@ When you complete this course, you will be able to:
 To complete this workshop you will need the following:
 
 - A client computer connected to the Internet that has a Linux shell and can run SQL Server command line tools.
-- Access to a OpenShift 3.11 cluster
+- Access to a OpenShift 4 cluster. All the examples in this workshop were built using Azure Red Hat Openshift (ARO). Learn more about ARO at https://docs.microsoft.com/azure/openshift/intro-openshift.
 - Access to all the scripts provided from this workshop from the GitHub repo.
 
 The Prerequisites module in this workshop provides all the details of tools and software required to take this workshop.
@@ -144,7 +141,6 @@ This is a modular workshop, and in each section, you'll learn concepts, technolo
   <tr><td style="background-color: AliceBlue; color: black;"><a href="sqlonopenshift/02_Query.md" target="_blank">02 - Connect and Query SQL Server</a> </td><td td style="background-color: AliceBlue; color: black;"> Learn the basics of connecting and running queries to a SQL Server container on OpenShift</td></tr>
   <tr><td><a href="sqlonopenshift/03_Performance.md" target="_blank">03 - Performance Capabilities of SQL Server</a></td><td> Learn how to boost query performance and take advantage of intelligent query processing</td></tr>
   <tr><td style="background-color: AliceBlue; color: black;"><a href="sqlonopenshift/04_HA.md" target="_blank">04 - High Availability of SQL Server on OpenShift</a> </td><td td style="background-color: AliceBlue; color: black;"> Learn the fundamentals of high availability for SQL Server on OpenShift</td></tr>  
-  <tr><td><a href="sqlonopenshift/05_Operator.md" target="_blank">05 - Using an Operator with SQL Server </a></td><td> Learn how to deploy, configure, and setup Always On Availability Groups with an Operator on OpenShift</td></tr>
   <tr></tr>
   <tr></tr>
 
