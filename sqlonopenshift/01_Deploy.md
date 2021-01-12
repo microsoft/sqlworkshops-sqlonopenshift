@@ -78,6 +78,8 @@ When this completes, you should see the following messages and be placed back at
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Create credentials</p>
 
+TODO: This is where we need to put in how to create a custom scc to support fsGroup and apply that scc to all service accounts for the project. You can mention here though that you could also create a new user with anyuid rights and then add that use to the custom scc. We should put this in a script and add this as step 2.
+
 Next you'll create a `secret` to store the System Administrator (**sa**) password. For this workshop, you will be connecting as the **sa** login. 
 
 >**NOTE**: *In production SQL Server environments, you would not use the **sa** login.* 
@@ -110,6 +112,8 @@ When this completes you should see the following message and be placed back at t
 
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="../graphics/checkbox.png">Deploy SQL Server</p>
+
+TODO: Change this to SQL 2019 GA container
 
 Use the following command or execute the **step4_deploy_sql.sh** script to deploy SQL Server:
 
