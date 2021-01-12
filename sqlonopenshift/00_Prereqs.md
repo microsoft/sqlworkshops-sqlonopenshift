@@ -38,6 +38,8 @@ In order to go through the activities of this workshop you will need the followi
 
 The workshop currently supports a single node OpenShift cluster but can be run on a multiple cluster environment. For cluster administrators building a cluster for this workshop, each user will need ~8Gb of RAM to run the containers in the workshop.
 
+The scripts will pull container images for SQL Server 2019 based on Red Hat Enterprise Linux 8.
+
 >**Note**: *If you are attending this course in-person, the instructor may provide you with a client environment and full access to an OpenShift cluster including login credentials.*
 
 With the above environment configured, you can now proceed to the first Activity for the course.

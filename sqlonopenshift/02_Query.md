@@ -71,14 +71,11 @@ In this example, the IP address and the port of the Load Balancer service is use
 The output of this command will look similar to the following:
 
 <pre>
-Microsoft SQL Server 2019 (CTP2.2) - 15.0.1200.24 (X64)
-Dec 5 2018 16:51:26
-Copyright (C) 2019 Microsoft Corporation
-Developer Edition (64-bit) on Linux (Red Hat Enterprise Linux Server 7.6 (Maipo)) X64                       
-(1 rows affected)
+Microsoft SQL Server 2019 (RTM-CU1) (KB4527376) - 15.0.4003.23 (X64)
+        Dec  6 2019 14:53:33
+        Copyright (C) 2019 Microsoft Corporation
+        Developer Edition (64-bit) on Linux (Red Hat Enterprise Linux 8.0 (Ootpa)) <X64>
 </pre>
-
-(Your version information may be different depending on the version of SQL Server installation)
 
 Next, proceed to the next activity to work with databases with SQL Server by restoring a backup.
 
