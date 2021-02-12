@@ -27,7 +27,6 @@ The workshop does not assume a deep working knowledge of SQL Server or OpenShift
 In order to go through the activities of this workshop you will need the following:
 
 - Access to an OpenShift 4 cluster
-- Modules 1 through 4 require user privileges for the OpenShift cluster for **anyuid** at minimum.
 - A client computer that has access to connect to the OpenShift cluster with the following software installed and configured:
   - A Linux bash shell
   - The OpenShift CLI (oc.exe)
